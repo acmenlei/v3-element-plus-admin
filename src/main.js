@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import { router } from "./router";
+import ElementPlus from "./plugins/elment-plus";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app
+  .use(router)
+  .use(ElementPlus)
+  .mount("#app");
