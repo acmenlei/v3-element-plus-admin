@@ -1,11 +1,10 @@
 <template>
   <div id="tabview">
     <el-menu
-      @select="handleSelect"
       :uniqueOpened="true"
       class="el-menu-vertical-demo"
       background-color="var(--theme)"
-      style="height: 90vh; padding-top: 10vh"
+      style="height: 100%; padding-top: 10vh"
       router
     >
       <div v-for="(route, index) in routes" :key="index">
@@ -45,12 +44,8 @@ export default defineComponent({
   name: "App",
   setup() {
     let routes = configRouters;
-    const handleSelect = (e) => {
-      console.log(e);
-    };
     return {
       routes,
-      handleSelect,
     };
   },
 });

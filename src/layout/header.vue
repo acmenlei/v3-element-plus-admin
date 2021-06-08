@@ -1,7 +1,16 @@
 <template>
   <div id="myheader">
-    <el-avatar :size="30" :src="head" />
-    <span>name</span>
+    <el-dropdown>
+      <span class="el-dropdown-link">
+        <el-avatar :size="30" :src="head" />
+        <span>name</span>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item>退出登陆</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
   </div>
 </template>
 
@@ -18,10 +27,10 @@ export default {
 };
 </script>
 <style scoped>
-#myheader {
+#myheader .el-dropdown-link {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 #myheader span {
   margin-left: 0.5rem;

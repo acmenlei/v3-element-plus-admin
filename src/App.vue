@@ -2,17 +2,9 @@
   <router-view />
 </template>
 <script>
-import { defineComponent, reactive, toRefs } from "vue";
+import { defineComponent } from "vue";
 export default defineComponent({
   name: "App",
-  setup() {
-    const store = reactive({
-      test: "成功上岸！！！",
-    });
-    return {
-      ...toRefs(store),
-    };
-  },
 });
 </script>
 <style>

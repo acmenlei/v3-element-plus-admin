@@ -4,7 +4,14 @@
     <el-aside width="220px"><Tabview /> </el-aside>
     <el-container>
       <el-header> <Header /> </el-header>
-      <el-main> <router-view/> </el-main>
+      <el-main>
+        <!-- 路由缓存 -->
+        <router-view v-slot="{ Component }">
+          <keep-alive include="home">
+            <component :is="Component" />
+          </keep-alive>
+        </router-view>
+      </el-main>
       <!-- <el-footer> <Footer /> </el-footer> -->
     </el-container>
   </el-container>
@@ -12,7 +19,7 @@
 <script>
 import Tabview from "./tabview.vue";
 import Header from "./header.vue";
-// import Footer from "./footer.vue";
+
 export default {
   name: "layout",
   components: { Tabview, Header },
@@ -31,6 +38,11 @@ header,
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+main,
+footer,
+header {
+  padding: 10px;
 }
 .title {
   height: 60px;

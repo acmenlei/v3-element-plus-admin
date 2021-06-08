@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: "editor",
+  name: "edit",
 };
 </script>
