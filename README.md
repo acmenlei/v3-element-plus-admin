@@ -1,24 +1,18 @@
-# vuetest
+# vue3-element-plus-admin
 
-## Project setup
-```
-npm install
-```
+基于vue3的element-plus-admin,开箱即用
 
-### Compiles and hot-reloads for development
+## 依赖安装
 ```
-npm run serve
+npm install 或者 yarn
 ```
 
-### Compiles and minifies for production
+### 项目启动
+```
+npm run serve 或者 yarn serve
+```
+
+### 项目打包
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
