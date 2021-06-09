@@ -8,8 +8,13 @@ files.keys().forEach((key) => {
   // 读取文件中的default模块
   configRouters = configRouters.concat(files(key).default);
 });
-
-const routes = [{ path: "/", redirect: "/home" }].concat(configRouters);
+// 默认路由配置
+const defaultRoutes = [
+  { path: "/", redirect: "/login" },
+  { path: "/login", name: "登陆", component: () => import("@/views/login") },
+];
+// 拼装路由
+const routes = defaultRoutes.concat(configRouters);
 
 const router = createRouter({
   history: createWebHistory(),
