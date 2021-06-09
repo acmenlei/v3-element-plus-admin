@@ -1,21 +1,22 @@
 <template>
   <div class="container">
     <el-card id="login">
-      <el-form
-        :model="ruleForm"
-        :rules="rules"
-        ref="ruleForm"
-        label-width="80px"
-        class="demo-ruleForm"
+      <el-form :model="ruleForm"
+                :rules="rules"
+                ref="ruleForm"
+                label-width="80px"
+                class="demo-ruleForm"
       >
         <el-form-item size="mini">
           <h3>个人博客B端管理台</h3>
         </el-form-item>
-        <el-form-item label="用户名" prop="username" size="mini">
-          <el-input v-model="ruleForm.username"></el-input>
+        <el-form-item prop="username" size="mini">
+          <el-input v-model="ruleForm.username" prefix-icon="el-icon-user" size="mini" placeholder="请输入帐号">
+          </el-input>
         </el-form-item>
-        <el-form-item label="密码" prop="password" size="mini">
-          <el-input type="password" v-model="ruleForm.password"></el-input>
+        <el-form-item prop="password" size="mini">
+          <el-input type="password" v-model="ruleForm.password" prefix-icon="el-icon-lock" size="mini" placeholder="请输入密码">
+          </el-input>
         </el-form-item>
         <el-form-item>
           <el-button style="width: 100%" type="primary" size="mini"
@@ -38,7 +39,7 @@ export default {
           {
             max: 11,
             min: 11,
-            message: "请输入正确的账号",
+            message: "请输入有效的账号",
             trigger: "blur",
             required: true,
           },
@@ -47,7 +48,7 @@ export default {
           {
             max: 16,
             min: 8,
-            message: "请输入正确的密码",
+            message: "请输入有效的密码",
             trigger: "blur",
             required: true,
           },
@@ -77,7 +78,7 @@ export default {
 }
 #login {
   width: 300px;
-  height: 350px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
