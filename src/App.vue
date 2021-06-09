@@ -3,8 +3,13 @@
 </template>
 <script>
 import { defineComponent } from "vue";
+// import { useStore } from "vuex"
 export default defineComponent({
   name: "App",
+  setup() {
+    // const store = useStore();
+    // store.getters["user/token"];
+  }
 });
 </script>
 <style>

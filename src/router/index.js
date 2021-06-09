@@ -9,9 +9,11 @@ files.keys().forEach((key) => {
   configRouters = configRouters.concat(files(key).default);
 });
 
+const routes = [{ path: "/", redirect: "/home" }].concat(configRouters);
+
 const router = createRouter({
   history: createWebHistory(),
-  routes: configRouters,
+  routes,
 });
 
 export { router, configRouters };
