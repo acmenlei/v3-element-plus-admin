@@ -8,7 +8,7 @@
                 class="demo-ruleForm"
       >
         <el-form-item size="mini">
-          <h3>个人博客B端管理台</h3>
+          <h3>测试管理台</h3>
         </el-form-item>
         <el-form-item prop="username" size="mini">
           <el-input v-model="ruleForm.username" prefix-icon="el-icon-user" size="mini" placeholder="请输入帐号">
@@ -73,7 +73,7 @@ export default {
 .container {
   width: 100vw;
   height: 100vh;
-  background: url("../assets/images/background.jpg");
+  background: url("../../assets/images/background.jpg");
   background-size: 100% 100%;
 }
 #login {

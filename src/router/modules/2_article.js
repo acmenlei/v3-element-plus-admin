@@ -1,7 +1,7 @@
 import layout from "@/layout";
 export default {
   path: "/article",
-  name: "文章管理",
+  name: "创作中心",
   onlyOne: false,
   icon: "el-icon-edit-outline",
   component: layout,
@@ -11,14 +11,14 @@ export default {
       name: "文章查看",
       hidden: false,
       icon: "el-icon-view",
-      component: () => import("@/views/article.vue"),
+      component: () => import("@/views/article/articleList.vue"),
     },
     {
       path: "/article/edit",
       hidden: false,
-      name: "文章设置",
+      name: "发布文章",
       icon: "el-icon-edit",
-      component: () => import("@/views/edit.vue"),
+      component: () => import("@/views/article/articleEdit.vue"),
     },
   ],
 };

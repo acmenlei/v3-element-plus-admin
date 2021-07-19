@@ -1,5 +1,5 @@
 <template>
-  <div class="title">个人博客B端管理台</div>
+  <div class="title">测试管理台</div>
   <el-container>
     <el-aside width="220px"><Tabview /> </el-aside>
     <el-container>
@@ -12,7 +12,6 @@
           </keep-alive>
         </router-view>
       </el-main>
-      <!-- <el-footer> <Footer /> </el-footer> -->
     </el-container>
   </el-container>
 </template>

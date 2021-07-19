@@ -11,7 +11,7 @@ files.keys().forEach((key) => {
 // 默认路由配置
 const defaultRoutes = [
   { path: "/", redirect: "/login" },
-  { path: "/login", name: "登陆", component: () => import("@/views/login") },
+  { path: "/login", name: "登陆", component: () => import("@/views/login/index.vue") },
 ];
 // 拼装路由
 const routes = defaultRoutes.concat(configRouters);
